@@ -1,7 +1,6 @@
 ---
 - name: Set timezone
-  community.general.timezone:
-    name: "{{ timezone }}"
+  command: timedatectl set-timezone "{{ timezone }}"
 
 - name: Configure Chrony
   become: yes
