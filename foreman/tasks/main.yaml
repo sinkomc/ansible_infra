@@ -6,9 +6,12 @@
       tags:
         - 'edit hosts file'
 
+- debug: msg="{{ ansible_distribution_version.split(".") [0] }}"
+  register: distribution_version
+
 - name: Installing Repositories
   include_tasks:
-    file: "{{ ansible_os_family | upper }}_R{{ ansible_distribution_version.split(".") [0] }}_repos.yaml"
+    file: "{{ ansible_os_family | upper }}_R{{ distribution_version }}_repos.yaml"
     apply:
       tags:
         - 'install repos'
