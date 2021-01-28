@@ -1,7 +1,11 @@
 ---
-- name: Installing {{ package }}
-  include_tasks:
-    file: install.yaml
-    apply:
-      tags:
-        - install
+- name: Install {{ package }}
+  yum:
+    name: "{{ package }}"
+    state: latest
+# - name: Installing {{ package }}
+#   include_tasks:
+#     file: install.yaml
+#     apply:
+#       tags:
+#         - install
