@@ -1,17 +1,2 @@
 hostname: foreman
 domain: sinko.local
-foreman_ports_tcp:
-  - 53
-  - 80
-  - 443
-  - 3000
-  - 8140
-  - 3306
-  - 5432
-  - 8443
-  - 5910
-  - 5930
-foreman_ports_udp:
-  - 67
-  - 68
-  - 69

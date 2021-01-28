@@ -1,6 +1,29 @@
 ---
 - name: Allow Foreman ports tcp
   firewalld:
-    port: 80/tcp
+    port: {{ item }}/tcp
     permanent: yes
     immediate: yes
+    state: enabled
+  loop:
+    - 53
+    - 80
+    - 443
+    - 3000
+    - 8140
+    - 3306
+    - 5432
+    - 8443
+    - 5910
+    - 5930
+
+- name: Allow Foreman ports udp
+  firewalld:
+    port: {{ item }}/tcp
+    permanent: yes
+    immediate: yes
+    state: enabled
+  loop:
+    - 67
+    - 68
+    - 69
