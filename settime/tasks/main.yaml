@@ -6,9 +6,16 @@
       tags:
         - install
 
-- name: Configure {{ package }}
+- name: Configuring {{ package }}
   include_tasks:
     file: config.yaml
     apply:
       tags:
-        - config
+        - 'config chrony'
+
+- name: Enable service {{ chrony_service_name }}
+  include_tasks:
+    file: service.yaml
+    apply:
+      tags:
+        - 'enable chrony'
