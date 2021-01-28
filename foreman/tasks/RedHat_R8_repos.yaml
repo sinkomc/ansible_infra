@@ -1,6 +1,6 @@
 ---
 - name: Import Pupper repo key
-  ansible.builint.rpm_key:
+  ansible.builtin.rpm_key:
     state: present
     key: "{{ puppet_gpgkey }}"
 
