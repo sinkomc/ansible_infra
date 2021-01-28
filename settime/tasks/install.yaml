@@ -1,9 +1,8 @@
 ---
 - name: Install {{ package }}
   become: yes
-  package:
+  yum:
     name: "{{ package }}"
-    state: 'present'
   tags:
     - 'chrony-install'
     - 'chrony'
