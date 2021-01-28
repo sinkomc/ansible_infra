@@ -6,4 +6,4 @@
   changed_when: no
 
 - debug: mgs="No ta"
-  when: checkhostsfile.rc == 0
+  when: checkhostsfile.rc == 1
