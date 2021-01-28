@@ -5,5 +5,8 @@
   ignore_errors: yes
   changed_when: no
 
-- debug: msg="No ta"
-  when: checkhostsfile.rc == 1
+- name: Edit /etc/hosts
+  lineinfile:
+    path: /etc/hosts
+    line: "{{ ansible_default_ipv4.addres }} {{ hostname }}.{{ domain }} {{ hostname }}"
+  when: checkhostsfile.rc == 11
