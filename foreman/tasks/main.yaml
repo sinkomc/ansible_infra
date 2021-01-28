@@ -6,4 +6,4 @@
       tags:
         - 'edit hosts file'
 - debug: msg="{{ ansible_os_family | upper }}"
-- debug: msg="{{ ansible_os_family_version | upper }}"
+- debug: msg="{{ ansible_distribution_version }}"
