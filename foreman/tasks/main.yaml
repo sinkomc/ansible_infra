@@ -8,11 +8,11 @@
 
 - name: Installing Repositories
   include_tasks:
-    file: {{ ansible_os_family | upper }}_R{{ ansible_distribution_version.split(".") [0] }_repos.yaml
+    file: "{{ ansible_os_family | upper }}_R{{ ansible_distribution_version.split(".") [0] }_repos.yaml"
     apply:
       tags:
         - 'install repos'
-  when: {{ ansible_distribution_version.split(".") [0] }} = 8 && {{ ansible_os_family | upper }
+  when: "{{ ansible_distribution_version.split(".") [0] }} = 8 && {{ ansible_os_family | upper }"
 
 # - debug: msg="{{ ansible_os_family | upper }}"
 # - debug: msg="{{ ansible_distribution_version.split(".") [0] }}"
