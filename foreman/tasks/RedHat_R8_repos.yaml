@@ -1,2 +1,10 @@
 ---
-- debug: msg="Llgue"
+- name: Install Puppet repo
+  yum:
+    name: "{{ puppet_repo }}"
+    state: present
+
+- name: Install Foreman repo
+  yum:
+    name: "{{ foreman_repo }}"
+    state: present

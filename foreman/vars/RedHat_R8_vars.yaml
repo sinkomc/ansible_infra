@@ -1,0 +1,3 @@
+puppet_repo: https://yum.puppet.com/puppet6-release-el-8.noarch.rpm
+foreman_repo: https://yum.theforeman.org/releases/2.1/el8/x86_64/foreman-release.rpm
+foreman_package: foreman_installer
