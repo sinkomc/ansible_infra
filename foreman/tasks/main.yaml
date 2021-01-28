@@ -1,6 +1,9 @@
 - name: Check /etc/hosts contains {{ ansible_default_ipv4.address }}
   command: grep -Fxq "{{ ansible_default_ipv4.address }}" /etc/hosts
   register: checkhostsfile
+  check_mode: no
+  ignore_errors: yes
+  changed_when: no
 
 - debug: mgs="No ta"
   when: checkhostsfile.rc == 0
