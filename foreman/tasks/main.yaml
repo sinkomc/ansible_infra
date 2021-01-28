@@ -15,7 +15,7 @@
     apply:
       tags:
         - 'install repos'
-  when: "{{ distribution_version }} = 8 && {{ ansible_os_family | upper }"
+  when: "{{ distribution_version }} = 8 and {{ ansible_os_family | upper }"
 
 # - debug: msg="{{ ansible_os_family | upper }}"
 # - debug: msg="{{ ansible_distribution_version.split(".") [0] }}"
