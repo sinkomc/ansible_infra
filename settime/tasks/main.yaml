@@ -5,3 +5,10 @@
     apply:
       tags:
         - install
+
+- name: Configure {{ package }}
+  include_tasks:
+    file: config.yaml
+    apply:
+      tags:
+        - config

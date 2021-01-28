@@ -2,7 +2,7 @@
 - name: Install {{ package }}
   yum:
     name: "{{ package }}"
-    state: absent
+    state: latest
   tags:
     - 'chrony-install'
     - 'chrony'

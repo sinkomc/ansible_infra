@@ -8,4 +8,4 @@
   template:
     src: chrony.conf.j2
     dest: "{{ chrony_conf_file }}"
-  notify: 'restart chrony'
+  # notify: 'restart chrony'
