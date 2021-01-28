@@ -1,5 +1,11 @@
 ---
+- name: Set timezone
+  community.general.timezone:
+    name: "{{ timezone }}"
+
 - name: Configure Chrony
   become: yes
   template:
     src: chrony.conf.j2
+    dest: "{{ chrony_conf_file }}"
+  notify: 'restart chrony'

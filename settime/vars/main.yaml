@@ -1,2 +1,4 @@
 package: chrony
 chrony_conf_file: /etc/chrony.conf
+timezone: America/Mexico_city
+chrony_service_name: chronyd
