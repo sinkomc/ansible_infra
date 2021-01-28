@@ -1,6 +1,9 @@
 ---
 - name: Include os-specific vars
-  inlcude_vars: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_vars.yaml"
+  include_vars: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_vars.yaml"
+  tags:
+    - 'foreman'
+    - 'foreman-vars'
 
 - name: Editing /etc/hosts
   include_tasks:
@@ -12,6 +15,14 @@
 - name: Installing Repositories
   include_tasks:
     file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_repos.yaml"
+    apply:
+      tags:
+        - 'install repos'
+  when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '8'
+
+- name: Installing Foreman
+  include_tasks:
+    file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_install.yaml"
     apply:
       tags:
         - 'install repos'
