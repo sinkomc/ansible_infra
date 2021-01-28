@@ -12,4 +12,4 @@
     apply:
       tags:
         - 'install repos'
-  when: "{{ ansible_facts['os_family'] | upper }} == REDHAT and {{ ansible_facts['distribution_major_version'] }} == 8"
+  when: {{ ansible_facts['os_family'] | upper }} == 'REDHAT
