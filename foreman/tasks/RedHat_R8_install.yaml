@@ -7,4 +7,4 @@
   shell: foreman-installer
   register: foreman
 
-- debug: msg="{{ foreman.stdout }}"
+- debug: msg="{{ foreman }}"
