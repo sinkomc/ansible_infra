@@ -1,7 +1,7 @@
 ---
 - name: Allow Foreman ports tcp
   firewalld:
-    port: "{{ item }}"/tcp
+    port: '{{ item }}'/tcp
     permanent: yes
     immediate: yes
     state: enabled
@@ -19,7 +19,7 @@
 
 - name: Allow Foreman ports udp
   firewalld:
-    port: "{{ item }}"/tcp
+    port: '{{ item }}'/tcp
     permanent: yes
     immediate: yes
     state: enabled
