@@ -1,5 +1,5 @@
-- name: Check /etc/hosts contains {{ ansible_default_ipv4.addres }}
-  command: grep -Fxq "{{ ansible_default_ipv4.addres }}" /etc/hosts
+- name: Check /etc/hosts contains {{ ansible_default_ipv4.address }}
+  command: grep -Fxq "{{ ansible_default_ipv4.address }}" /etc/hosts
   register: checkhostsfile
 
 - debug: mgs="No ta"
