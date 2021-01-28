@@ -1,0 +1,5 @@
+---
+- name: Configure Chrony
+  become: yes
+  template:
+    src: chrony.conf.j2
