@@ -5,5 +5,5 @@
     apply:
       tags:
         - 'edit hosts file'
-# - debug: msg="{{ ansible_os_family | upper }}"
-# - debug: msg="{{ hostname }}.{{ domain }}"
+- debug: msg="{{ ansible_os_family | upper }}"
+- debug: msg="{{ ansible_os_family_version | upper }}"
