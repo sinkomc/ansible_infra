@@ -4,7 +4,7 @@
     name: "{{ foreman_package }}"
     state: latest
 - name: Install foreman
-  command: foreman-installer
+  shell: foreman-installer
   register: foreman
 
 - debug: msg="{{ foreman }}"
