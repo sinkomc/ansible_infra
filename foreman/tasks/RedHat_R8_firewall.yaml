@@ -5,7 +5,7 @@
     permanent: yes
     immediate: yes
     state: enabled
-  loop:
+  with_items:
     - 53
     - 80
     - 443
@@ -23,7 +23,7 @@
     permanent: yes
     immediate: yes
     state: enabled
-  loop:
+  with_items:
     - 67
     - 68
     - 69
