@@ -1,6 +1,6 @@
 ---
-- name: Install chrony
+- name: Install {{ package }}
   become: yes
   yum:
-    name: chrony
+    name: {{ package }}
     state: latest
