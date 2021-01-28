@@ -3,4 +3,4 @@
   become: yes
   yum:
     name: "{{ package }}"
-    state: latest
+    state: present
