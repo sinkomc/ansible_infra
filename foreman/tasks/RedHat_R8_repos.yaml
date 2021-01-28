@@ -1,4 +1,9 @@
 ---
+- name: Import Pupper repo key
+  ansible.builint.rpm_key:
+    state: present
+    key: "{{ puppet_gpgkey }}"
+
 - name: Install Puppet repo
   yum:
     name: "{{ puppet_repo }}"

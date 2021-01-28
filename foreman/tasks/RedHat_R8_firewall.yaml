@@ -1,0 +1,4 @@
+---
+- name: Allow Foreman
+  firewalld:
+    port: {{ foreman_port }}
