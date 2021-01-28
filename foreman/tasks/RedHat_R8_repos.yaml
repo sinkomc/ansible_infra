@@ -1,5 +1,5 @@
 ---
-- name: Import Pupper repo key
+- name: Import Puppet repo key
   ansible.builtin.rpm_key:
     state: present
     key: "{{ puppet_gpgkey }}"
@@ -8,6 +8,11 @@
   yum:
     name: "{{ puppet_repo }}"
     state: present
+
+- name: Import Foreman repo key
+  ansible.builtin.rpm_key:
+    state: present
+    key: "{{ foreman_gpgkey }}"  
 
 - name: Install Foreman repo
   yum:
