@@ -6,13 +6,13 @@
       tags:
         - 'edit hosts file'
 
-# - name: Installing Repositories
-#   include_tasks:
-#     file: {{ ansible_os_family | upper }}-R{{ ansible_distribution_version }}repos.yaml
-#     apply:
-#       tags:
-#         - 'install repos'
-#   when: ansible_distribution_version >= 8 && ansible_os_family
+- name: Installing Repositories
+  include_tasks:
+    file: {{ ansible_os_family | upper }}_R{{ ansible_distribution_version.split(".") [0] }_repos.yaml
+    apply:
+      tags:
+        - 'install repos'
+  when: {{ ansible_distribution_version.split(".") [0] }} = 8 && {{ ansible_os_family | upper }
 
-- debug: msg="{{ ansible_os_family | upper }}"
-- debug: msg="{{ ansible_distribution_version.split(".") [0] }}"
+# - debug: msg="{{ ansible_os_family | upper }}"
+# - debug: msg="{{ ansible_distribution_version.split(".") [0] }}"
