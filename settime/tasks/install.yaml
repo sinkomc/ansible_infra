@@ -2,5 +2,5 @@
 - name: Install {{ package }}
   become: yes
   yum:
-    name: {{ package }}
+    name: "{{ package }}"
     state: latest
