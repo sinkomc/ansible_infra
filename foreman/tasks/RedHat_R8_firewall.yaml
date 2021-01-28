@@ -1,4 +1,6 @@
 ---
-- name: Allow Foreman
+- name: Allow Foreman ports tcp
   firewalld:
-    port: {{ foreman_port }}
+    port: {{ foreman_ports_tcp }}/tcp
+    permanent: true
+    immediate: yes    
