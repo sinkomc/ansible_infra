@@ -1,6 +1,6 @@
 ---
 - name: Installing {{ package }}
-  inlcude_tasks:
+  include_tasks:
     file: install.yaml
     apply:
       tags:
