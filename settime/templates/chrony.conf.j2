@@ -2,10 +2,10 @@
 # Use public servers from the pool.ntp.org project.
 # Please consider joining the pool (http://www.pool.ntp.org/join.html).
 # pool 2.pool.ntp.org iburst
-{% if chrony_pool %}
+{% if chrony_pool is defined %}
 pool {{ chrony_pool }} iburst
 {% endif %}
-{% if chrony_server %}
+{% if chrony_server is defined %}
 {% for server in chrony_server %}
 server {{ server }} iburst
 {% endfor %}
@@ -29,7 +29,7 @@ rtcsync
 
 # Allow NTP client access from local network.
 #allow 192.168.0.0/16
-{% if chrony_allow %}
+{% if chrony_allow is defined %}
 {% for block in chrony_allow %}
 allow {{ block }}
 {% endfor %}
