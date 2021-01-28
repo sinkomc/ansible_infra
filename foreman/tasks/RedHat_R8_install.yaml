@@ -3,6 +3,3 @@
   yum:
     name: "{{ foreman_package }}"
     state: latest
-
-- name: Run foreman installer
-  command: foreman-installer -i
