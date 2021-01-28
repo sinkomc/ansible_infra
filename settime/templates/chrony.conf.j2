@@ -8,7 +8,7 @@ pool {{ chrony_pool }} iburst
 {% if chrony_server %}
 {% for server in chrony_server %}
 server {{ server }} iburst
-{% end for %}
+{% endfor %}
 {% endif %}
 # Record the rate at which the system clock gains/losses time.
 driftfile /var/lib/chrony/drift
@@ -30,8 +30,6 @@ rtcsync
 # Allow NTP client access from local network.
 #allow 192.168.0.0/16
 {% if chrony_allow %}
-# This directive designates subnets (or nodes) from which NTP clients are allowed
-# to access to 'chronyd'.
 {% for block in chrony_allow %}
 allow {{ block }}
 {% endfor %}
