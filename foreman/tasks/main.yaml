@@ -11,12 +11,12 @@
     apply:
       tags:
         - 'edit hosts file'
-        
+
 - name: Task only for OS family RedHat
   block:
     - name: Opening Firewall ports
       include_tasks:
-        file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_firewall.yaml"
+        file: "{{ ansible_facts['os_family'] }}_firewall.yaml"
         apply:
           tags:
             - 'firewall'
