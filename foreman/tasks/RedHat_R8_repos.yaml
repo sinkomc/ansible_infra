@@ -17,5 +17,5 @@
     description: Oracle Linux $releasever EPEL ($basearch)
     baseurl: https://yum.oracle.com/repo/OracleLinux/OL8/developer/EPEL/$basearch/
     gpgcheck: yes
-    enable: yes
+    enabled: yes
   when: ansible_facts['distribution'] == 'OracleLinux'
