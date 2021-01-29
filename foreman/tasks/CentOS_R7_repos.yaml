@@ -10,10 +10,3 @@
     name: "{{ item }}"
     state: present
   loop: "{{ repositories }}"
-
-- name: Install Repositories OL
-  yum:
-    name: "{{ item }}"
-    state: present
-  loop: "{{ ol_repositories }}"
-  when: ansible_facts['distribution'] == 'OracleLinux'

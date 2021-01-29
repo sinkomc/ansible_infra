@@ -1,2 +1,10 @@
 hostname: foreman
 domain: sinko.local
+foreman_plugins:
+  - katello
+  - foreman-plugin-openscap
+  - foreman-plugin-ansible
+  - foreman-cli-virt-who-configure
+  - foreman-plugin-discovery
+  - foreman-plugin-remote-execution-cockpit
+  - foreman-compute-ovirt
