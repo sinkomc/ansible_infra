@@ -2,8 +2,8 @@
 - name: Install tomcatjss
   yum:
     name:
-      - http://mirror.centos.org/centos/8/AppStream/x86_64/os/Packages/tomcatjss-7.5.0-1.module_el8.3.0+470+ca766673.noarch.rpm
       - http://mirror.centos.org/centos/8/AppStream/x86_64/os/Packages/jss-4.7.3-1.module_el8.3.0+500+458aeb54.x86_64.rpm
+      - http://mirror.centos.org/centos/8/AppStream/x86_64/os/Packages/tomcatjss-7.5.0-1.module_el8.3.0+470+ca766673.noarch.rpm
     state: present
   when: ansible_facts['distribution'] == 'OracleLinux'
 
