@@ -1,10 +1,11 @@
 ---
-- name: Install {{ foreman_package }}
+- name: Install Packages
   yum:
-    name: "{{ foreman_package }}"
+    name: "{{ packages }}"
     state: latest
+
 - name: Install foreman
-  shell: foreman-installer
+  shell: foreman-installer --scenario katello --foreman-initial-admin-username --foreman-initial-admin-password 'temporal123'
   register: foreman
 
 - debug: msg="{{ foreman }}"
