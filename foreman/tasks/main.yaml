@@ -11,27 +11,27 @@
     apply:
       tags:
         - 'edit hosts file'
+        
+- name: Task only for OS family RedHat
+  block:
+    - name: Opening Firewall ports
+      include_tasks:
+        file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_firewall.yaml"
+        apply:
+          tags:
+            - 'firewall'
 
-- name: Installing Repositories
-  include_tasks:
-    file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_repos.yaml"
-    apply:
-      tags:
-        - 'install repos'
-  when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '8'
-
-- name: Opening Firewall ports
-  include_tasks:
-    file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_firewall.yaml"
-    apply:
-      tags:
-        - 'firewall'
-  when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '8'
-
-- name: Installing Foreman
-  include_tasks:
-    file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_install.yaml"
-    apply:
-      tags:
-        - 'install foreman'
-  when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '8'
+    - name: Installing Repositories
+      include_tasks:
+        file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_repos.yaml"
+        apply:
+          tags:
+            - 'install repos'
+  when: ansible_facts['os_family'] == 'RedHat'
+# - name: Installing Foreman
+#   include_tasks:
+#     file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version'] }}_install.yaml"
+#     apply:
+#       tags:
+#         - 'install foreman'
+#   when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '8'
