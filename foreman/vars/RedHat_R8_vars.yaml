@@ -5,7 +5,7 @@ gpgkeys:
 repositories:
   - https://yum.puppet.com/puppet6-release-el-8.noarch.rpm
   - https://fedorapeople.org/groups/katello/releases/yum/3.18/katello/el8/x86_64/katello-repos-latest.rpm
-  
+  - https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 packages:
   - foreman-installer
   - katello
