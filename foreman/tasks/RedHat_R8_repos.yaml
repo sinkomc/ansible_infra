@@ -10,3 +10,12 @@
     name: "{{ item }}"
     state: present
   loop: "{{ repositories }}"
+
+- name: Enable epel Repository
+  yum_repository:
+    name: ol8_developer_EPEL
+    description: Oracle Linux $releasever EPEL ($basearch)
+    baseurl: https://yum.oracle.com/repo/OracleLinux/OL8/developer/EPEL/$basearch/
+    gpgcheck: yes
+    enable: yes
+  when: ansible_facts['distribution'] == 'OracleLinux'

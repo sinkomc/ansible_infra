@@ -1,6 +1,4 @@
 ---
-- debug: msg="{{ ansible_facts['distribution'] }}"
-
 - name: Install Packages
   yum:
     name: "{{ item }}"
