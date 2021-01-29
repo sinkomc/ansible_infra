@@ -20,15 +20,14 @@ None.
 
 ## Dependencies
 ***
-* settime
+* None.
 
 ## Example Playbook
 ***
 ```yaml
 - hosts: all
   roles:
-    - ../settime
-    - foreman
+    - settime
 ```
 ## License
 ***
