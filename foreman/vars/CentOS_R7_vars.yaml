@@ -3,10 +3,10 @@ gpgkeys:
   - https://yum.theforeman.org/releases/latest/RPM-GPG-KEY-foreman
   - https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
 repositories:
-  - https://yum.puppet.com/puppet7-release-el-7.noarch.rpm
+  - https://yum.puppet.com/puppet6-release-el-7.noarch.rpm
   - epel-release
-  - https://yum.theforeman.org/releases/latest/el7/x86_64/foreman-release.rpm
-  - https://fedorapeople.org/groups/katello/releases/yum/latest/katello/el7/x86_64/katello-repos-latest.rpm
+  - https://yum.theforeman.org/releases/2.3/el7/x86_64/foreman-release.rpm
+  - https://fedorapeople.org/groups/katello/releases/yum/3.18/katello/el7/x86_64/katello-repos-latest.rpm
   - centos-release-scl-rh
 
 packages:
