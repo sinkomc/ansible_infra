@@ -22,6 +22,6 @@
 
 - name: Setting time configurations
   include_role: ../settime
-    apply:
-      tags:
-        - "Set time"
+  apply:
+    tags:
+      - "Set time"
