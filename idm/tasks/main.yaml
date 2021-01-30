@@ -8,7 +8,7 @@
 - name: Setting common tasks
   include_role:
     name: ../common
-    tasks_from: ../common
+    tasks_from: ../common/tasks/
     apply:
       tags:
         - 'Set common tasks'
