@@ -9,13 +9,20 @@
   yum:
     name: '*'
     state: latest
-    
+
 - name: Editing /etc/hosts
   include_tasks:
     file: hosts.yaml
     apply:
       tags:
         - 'edit hosts file'
+
+- name: Setting hostname
+  include_tasks:
+    file: hostname.yaml
+    apply:
+      tags:
+        - 'set hostname'
 
 - name: Opening Firewall ports
   include_tasks:
