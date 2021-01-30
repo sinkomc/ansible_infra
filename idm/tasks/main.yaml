@@ -1,0 +1,12 @@
+---
+- name: Include os-specific vars
+  include_vars: "{{ ansible_facts['os-family'] }}_R{{ ansible_facts['distribution_major_version'] }}_vars.yaml"
+  tags:
+    - 'idm'
+    - 'idm-vars'
+
+- name: Setting common tasks
+  include_role: ../common
+    appy:
+      tags:
+        - 'Set common tasks'

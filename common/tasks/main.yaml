@@ -1,0 +1,27 @@
+---
+- name: Setting Hostname
+  include_tasks:
+    file: hostname.yaml"
+    apply:
+      tags:
+        - 'Set Hostme'
+
+- name: Editing /etc/hosts file
+  include_tasks:
+    file: hosts.yaml"
+    apply:
+      tags:
+        - 'Edit hosts file'
+
+- name: Updating system
+  include_tasks:
+    file: update.yaml"
+    apply:
+      tags:
+        - 'Update OS'
+
+- name: Setting time configurations
+  include_role: ../settime
+    apply:
+      tags:
+        - "Set time"

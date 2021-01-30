@@ -1,0 +1,3 @@
+hostname: hosts
+domain: example.com
+hosts_file: /etc/hosts

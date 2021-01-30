@@ -1,0 +1,5 @@
+---
+- name: Edit /etc/hosts file
+  lineinfile:
+    path: "{{ hosts_file }}"
+    line: "{{ ansible_default_ipv4.address }} {{ hostname }}.{{ domain }} {{ hostname }}"
