@@ -7,6 +7,7 @@ repositories:
   - epel-release
   - https://yum.theforeman.org/releases/latest/el7/x86_64/foreman-release.rpm
   - https://fedorapeople.org/groups/katello/releases/yum/latest/katello/el7/x86_64/katello-repos-latest.rpm
+  - foreman-release-scl
 
 packages:
   - foreman-installer
