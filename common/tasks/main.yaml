@@ -21,7 +21,8 @@
         - 'Update OS'
 
 - name: Setting time configurations
-  include_role: ../settime
-  apply:
-    tags:
-      - "Set time"
+  include_role:
+    name: ../settime
+    apply:
+      tags:
+        - "Set time"
