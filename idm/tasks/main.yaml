@@ -6,7 +6,8 @@
     - 'idm-vars'
 
 - name: Setting common tasks
-  include_role: ../common
+  include_role:
+    name: ../common
     appy:
       tags:
         - 'Set common tasks'
