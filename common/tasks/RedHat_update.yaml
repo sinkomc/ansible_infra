@@ -5,8 +5,6 @@
     state: latest
   register: updates
 
-- debug: msg="{{ updates }}"
-
-# - name: Reboot system
-#   reboot:
-#   when: updates.changes.updated|flatten|select('regex', '^kernel$') is any
+- name: Reboot system
+  reboot:
+  when: updates.result|flatten|select('regex', '^kernel$') is any
