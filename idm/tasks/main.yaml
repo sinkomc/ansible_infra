@@ -4,3 +4,7 @@
   tags:
     - 'idm'
     - 'idm-vars'
+
+- name: Setting common task
+  inlclude_role:
+    - name: ../common
