@@ -12,4 +12,4 @@
 
 - name: Reboot system
   debug: msg="ALV Me voy a reiniciar"
-  when: '"kernel" in updates'
+  when: "kernel" in updates
