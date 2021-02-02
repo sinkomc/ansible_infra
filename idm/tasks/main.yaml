@@ -10,3 +10,4 @@
     name: common
   vars:
     hostname: "{{ hostname_idm }}"
+    domain: "{{ domain_idm }}"
