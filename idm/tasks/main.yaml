@@ -8,6 +8,8 @@
 - name: Setting common task
   include_role:
     name: common
+    apply:
+      tags: 'Common tasks'
   vars:
     hostname: "{{ hostname_idm }}"
     domain: "{{ domain_idm }}"
@@ -16,9 +18,11 @@
 - name: Setting time
   include_role:
     name: settime
+    apply:
+      tags: 'Set time'
   vars:
     package: "{{ package_chrony_idm }}"
     chrony_conf_file: "{{ chrony_conf_file_idm }}"
     timezone: "{{ timezone_idm }}"
     chrony_service_name: "{{ chrony_service_name_idm }}"
-    chrony_server: "{{ chrony_server_name }}"
+    chrony_server: "{{ chrony_server_idm }}"
