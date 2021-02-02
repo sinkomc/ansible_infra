@@ -9,5 +9,4 @@
   include_role:
     name: ../common
   vars:
-    hostname: "{{ hostname }}"
-    domain: "{{ domain }}"
+    hostname: idm
