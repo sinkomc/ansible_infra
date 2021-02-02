@@ -12,3 +12,10 @@
     apply:
       tags:
         - 'Edit hosts file'
+
+- name: Updating OS
+  include_tasks:
+    file: update.yaml
+    apply:
+      tags:
+        - 'Update OS'
