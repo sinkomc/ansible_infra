@@ -5,4 +5,5 @@ package_chrony_idm: chrony
 chrony_conf_file_idm: /etc/chrony.conf
 timezone_idm: America/Mexico_City
 chrony_service_name_idm: chronyd
-chrony_server_idm: cenam.cronos.mx
+chrony_server_idm:
+  - cronos.cenam.mx
