@@ -6,5 +6,5 @@
     - 'idm-vars'
 
 - name: Setting common task
-  inlclude_role:
+  include_role:
     - name: ../common
