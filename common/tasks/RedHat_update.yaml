@@ -5,9 +5,6 @@
     state: latest
   register: updates
 
-- debug: msg="kernel"
-  register: updates
-
-- debug:
-    msg: "Match"
+- name: Reboopt system
+    reboot:
   when: updates is search("kernel")
