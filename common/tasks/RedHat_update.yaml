@@ -5,7 +5,7 @@
     state: latest
   register: updates
 
--debug: msg="{{ updates }}"
+- debug: msg="{{ updates }}"
 
 # - name: Reboot system
 #   reboot:
