@@ -5,5 +5,5 @@
     - 'idm'
     - 'idm-vars'
 
-- include_role:
-  name: common
+- import_role:
+    name: common
