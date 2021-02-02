@@ -7,4 +7,4 @@
 
 - name: Reboot system
   reboot:
-  when: updates.result|flatten|select('regex', '^kernel$') is any
+  when: updates.results|flatten|select('regex', '^kernel$') is any
