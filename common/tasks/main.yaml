@@ -15,7 +15,7 @@
 
 - name: Updating OS {{ ansible_facts['os_family'] }}
   include_tasks:
-    file: "{{ ansible_facts['os-family'] }}_update.yaml"
+    file: "{{ ansible_facts['os_family'] }}_update.yaml"
     apply:
       tags:
         - 'Update OS'
