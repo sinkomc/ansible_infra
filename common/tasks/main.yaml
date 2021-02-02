@@ -1,21 +1,7 @@
 ---
-- name: Installing 
+- name: Setting Hostname
   include_tasks:
     file: hostname.yaml
     apply:
       tags:
-        - install
-
-# - name: Configuring {{ package }}
-#   include_tasks:
-#     file: config.yaml
-#     apply:
-#       tags:
-#         - 'config chrony'
-#
-# - name: Enable service {{ chrony_service_name }}
-#   include_tasks:
-#     file: service.yaml
-#     apply:
-#       tags:
-#         - 'enable chrony'
+        - 'Set Hostname'
