@@ -1,7 +1,7 @@
-package_chrony: 
+package_chrony:
 chrony_conf_file:
 timezone:
 chrony_service_name:
-chrony_pool:
+# chrony_pool:
 chrony_server:
-chrony_allow:
+# chrony_allow:
