@@ -2,4 +2,4 @@
 - hosts: 192.168.100.12
   roles:
     - role: ../settime
-    - rolñe: idm
+    - role: idm
