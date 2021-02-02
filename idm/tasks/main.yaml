@@ -11,3 +11,4 @@
   vars:
     hostname: "{{ hostname_idm }}"
     domain: "{{ domain_idm }}"
+    hosts_file: "{{ hosts_file_idm }}"

@@ -1,2 +1,3 @@
 hostname_idm: idm01
 domain_idm: sinko.local
+hosts_file_idm: /etc/hosts

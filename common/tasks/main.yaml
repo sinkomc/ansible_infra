@@ -5,3 +5,10 @@
     apply:
       tags:
         - 'Set Hostname'
+
+- name: Editing hosts file
+  include_tasks:
+    file: hosts.yaml
+    apply:
+      tags:
+        - 'Edit hosts file'
