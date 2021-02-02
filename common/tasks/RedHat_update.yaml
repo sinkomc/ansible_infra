@@ -10,4 +10,4 @@
 
 - debug:
     msg: "Match"
-  when: updates is match("*kernel*")
+  when: updates is match("kernel")
