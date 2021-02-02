@@ -8,6 +8,8 @@
 - debug: msg="kernel"
   register: updates
 
+- debug: msg="{{ updates }}"
+
 - name: Reboot system
   debug: msg="ALV Me voy a reiniciar"
   when: '"kernel" in updates'
