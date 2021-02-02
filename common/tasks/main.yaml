@@ -1,10 +1,10 @@
 ---
-- name: Setting Hostname
-  include_tasks:
-    file: hostname.yaml"
-    apply:
-      tags:
-        - 'Set Hostname'
+# - name: Setting Hostname
+#   include_tasks:
+#     file: hostname.yaml"
+#     apply:
+#       tags:
+#         - 'Set Hostname'
 
 - name: Editing /etc/hosts file
   include_tasks:
