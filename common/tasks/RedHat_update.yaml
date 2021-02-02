@@ -6,5 +6,5 @@
   register: updates
 
 - name: Reboopt system
-    reboot:
+  reboot:
   when: updates is search("kernel")
