@@ -8,4 +8,4 @@
 - name: Setting common task
   include_role:
     name: ../common
-    vars_from: vars/S
+    vars_from: vars/
