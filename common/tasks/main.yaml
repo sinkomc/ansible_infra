@@ -13,9 +13,9 @@
       tags:
         - 'Edit hosts file'
 
-- name: Updating OS
+- name: Updating OS {{ ansible_facts['os-family'] }}
   include_tasks:
-    file: update.yaml
+    file: "{{ ansible_facts['os-family'] }}_update.yaml"
     apply:
       tags:
         - 'Update OS'
