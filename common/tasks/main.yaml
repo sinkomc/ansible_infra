@@ -4,7 +4,7 @@
     file: hostname.yaml"
     apply:
       tags:
-        - 'Set Hostme'
+        - 'Set Hostname'
 
 - name: Editing /etc/hosts file
   include_tasks:
