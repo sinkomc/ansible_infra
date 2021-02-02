@@ -4,6 +4,3 @@
   tags:
     - 'idm'
     - 'idm-vars'
-
-- import_role:
-    name: common
