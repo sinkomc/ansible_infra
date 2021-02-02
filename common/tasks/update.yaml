@@ -4,7 +4,7 @@
     name: '*'
     state: latest
   register: updates
-  
+
 - name: Reboot system
   reboot:
-  when: yum_updates.changes.updated|flatten|select('regex', '^kernel$') is any
+  when: updates.changes.updated|flatten|select('regex', '^kernel$') is any
