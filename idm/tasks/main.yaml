@@ -7,4 +7,4 @@
 
 - name: Setting common task
   include_role:
-    - name: ../common
+    name: ../common
