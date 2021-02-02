@@ -9,4 +9,4 @@
   include_role:
     name: ../common
   vars:
-    hostname: {{ hostname }}
+    hostname: '{{ hostname }}'
