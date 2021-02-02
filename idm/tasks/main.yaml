@@ -5,7 +5,8 @@
     - 'idm'
     - 'idm-vars'
 
-- debug: msg="{{ hostname }}"
 - name: Setting common task
   include_role:
     name: ../common
+  vars:
+    hostname: "{{ hostname }}"
