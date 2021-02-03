@@ -11,3 +11,11 @@ ssh_service_name: sshd
 ssh_config_file: /etc/ssh/sshd_config
 sysctl_conf_file: /etc/sysctl.d/01-ipv6.conf
 dns_file: /etc/resolv.conf
+firewall_services_idm:
+  - http
+  - https
+  - ldap
+  - ldaps
+  - kerberos
+  - dns
+  - ntp

@@ -1,9 +1,0 @@
----
-firewall_services_idm: test
-  # - http
-  # - https
-  # - ldap
-  # - ldaps
-  # - kerberos
-  # - dns
-  # - ntp
