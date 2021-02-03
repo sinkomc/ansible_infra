@@ -11,4 +11,4 @@
     file: "{{ ansible_facts['os_family'] }}_services.yaml"
     apply:
       tags:
-        - 'Allow firewall Ports'
+        - 'Allow firewall Services'
