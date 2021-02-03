@@ -4,7 +4,9 @@ streams:
   - adtrust
 packages:
   - bind-utils
-nic: ens160
+nics:
+  - ens160
+  - default
 ssh_service_name: sshd
 ssh_config_file: /etc/ssh/sshd_config
 sysctl_conf_file: /etc/sysctl.d/01-ipv6.conf

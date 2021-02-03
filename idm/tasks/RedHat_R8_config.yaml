@@ -1,17 +1,11 @@
 ---
-- name: Disable ipv6 on {{ nic }}
+- name: Disable ipv6 on {{ item }}
   sysctl:
-    name: net.ipv6.conf.{{ nic }}.disable_ipv6
+    name: net.ipv6.conf.{{ item }}.disable_ipv6
     value: '1'
     sysctl_file: "{{ sysctl_conf_file }}"
     sysctl_set: yes
-
-- name: Disable ipv6 on default
-  sysctl:
-    name: net.ipv6.conf.default.disable_ipv6
-    value: '1'
-    sysctl_file: "{{ sysctl_conf_file }}"
-    sysctl_set: yes
+  loop: "{{ nics }}"
 
 - name: Edit sshd service
   lineinfile:
