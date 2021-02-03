@@ -1,0 +1,9 @@
+---
+firewall_services_idm:
+  - http
+  - https
+  - ldap
+  - ldaps
+  - kerberos
+  - dns
+  - ntp
