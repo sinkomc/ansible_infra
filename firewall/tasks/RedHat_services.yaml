@@ -1,9 +1,9 @@
 ---
 - name: Allow firewall services
-  # debug: "{{ firewall_services }}"
-  firewalld:
-    service: "{{ item }}"
-    permanent: yes
-    immediate: yes
-    state: enabled
-   loop: "{{ firewall_services }}"
+  debug: "{{ firewall_services }}"
+  # firewalld:
+  #   service: "{{ item }}"
+  #   permanent: yes
+  #   immediate: yes
+  #   state: enabled
+  #  loop: "{{ firewall_services }}"
