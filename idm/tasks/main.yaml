@@ -36,7 +36,7 @@
 
 - name: Setting os config
   include_tasks:
-    file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version']}}config.yaml"
+    file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version']}}_config.yaml"
     apply:
       tags:
         - 'Set os config'
