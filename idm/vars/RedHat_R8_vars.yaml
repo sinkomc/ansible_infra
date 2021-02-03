@@ -2,3 +2,5 @@ module: DL1
 streams:
   - dns
   - adtrust
+packages:
+  - bind-utils

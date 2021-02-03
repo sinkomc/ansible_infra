@@ -1,12 +1,12 @@
 ---
-# - name: Enable idm module {{ module }}
-#   dnf_module:
-#     name: idm:"{{ module }}"
-#     state: enabled
-#     allow_switch_module_streams: true
-
 - name: Install idm streams
   dnf:
     name: "@idm:{{ module }}/{{ item }}"
     state: latest
   loop: "{{ streams }}"
+
+- name: Install packages
+  dnf:
+    name: "{{ items }}"
+    state: latest
+  loop: "{{ packages }}"
