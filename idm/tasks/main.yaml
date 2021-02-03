@@ -40,7 +40,8 @@
     apply:
       tags: 'Setup Firewall'
   vars:
-    firewall_services: "{{ firewall_services_idm }}"
+    firewall_services: "{{ item }}"
+  loop: "{{ firewall_services_idm }}"
 
 - name: Setting os config
   include_tasks:
