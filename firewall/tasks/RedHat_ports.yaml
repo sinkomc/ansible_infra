@@ -1,9 +1,10 @@
 ---
 - name: Allow firewall ports
-  firewalld:
-    port: "{{ item }}"
-    permanent: yes
-    immediate: yes
-    state: enabled
-  loop: "{{ firewall_ports }}"
+  debug: msg="{{ firewall_ports }}"
+  # firewalld:
+  #   port: "{{ item }}"
+  #   permanent: yes
+  #   immediate: yes
+  #   state: enabled
+  # loop: "{{ firewall_ports }}"
   when: firewall_ports != ""
