@@ -24,4 +24,4 @@
   lineinfile:
     path: "{{ dns_file }}"
     regexp: '^nameserver'
-    line: nameserver "{{ ansible_default_ipv4.address }}"
+    line: nameserver {{ ansible_default_ipv4.address }}

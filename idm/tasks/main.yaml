@@ -39,7 +39,7 @@
     name: firewall
     apply:
       tags: 'Setup Firewall'
-  vars:
+  defaults:
     firewall_services: "{{ firewall_services_idm }}"
 
 - name: Setting os config
