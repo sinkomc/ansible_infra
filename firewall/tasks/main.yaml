@@ -7,7 +7,7 @@
         - 'Allow firewall Ports'
   when: firewall_ports is defined
 
-- name: Allowing firewall ports
+- name: Allowing firewall services
   include_tasks:
     file: "{{ ansible_facts['os_family'] }}_services.yaml"
     apply:
