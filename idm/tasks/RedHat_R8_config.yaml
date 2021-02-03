@@ -1,7 +1,7 @@
 ---
 - name: Disable ipv6 on {{ nic }}
   sysctl:
-    name: net.ipv6.conf.'{{ nic }}'.disable_ipv6
+    name: net.ipv6.conf.{{ nic }}.disable_ipv6
     value: '1'
     sysctl_file: "{{ sysctl_conf_file }}"
     sysctl_set: yes
