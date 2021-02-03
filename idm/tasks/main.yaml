@@ -29,7 +29,7 @@
 
 - name: Installing idm
   include_tasks:
-    file: "{{ ansible_fact['os_family'] }}_R{{ ansible_fact['distribution_major_version']}}_install.yaml"
+    file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version']}}_install.yaml"
     apply:
       tags:
         - 'Install idm packages'

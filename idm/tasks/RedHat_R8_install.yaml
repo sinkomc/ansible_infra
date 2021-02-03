@@ -4,3 +4,9 @@
     name: idm:"{{ module }}"
     state: enabled
     allow_switch_module_streams: true
+
+- name: Install idm streams
+  dnf:
+    name: ""@idm:{{ module }}/{{ item }}"
+    state: latest
+  loop: "{{ streams }}"

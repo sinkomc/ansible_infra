@@ -1,1 +1,4 @@
 module: DL1
+streams:
+  - dns
+  - adtrust
