@@ -5,6 +5,6 @@
     state: latest
   register: updates
 
-- name: Reboopt system
+- name: Reboot system
   reboot:
   when: updates is search("kernel")
