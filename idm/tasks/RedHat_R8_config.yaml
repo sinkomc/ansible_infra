@@ -1,11 +1,12 @@
 ---
 - name: Add network kernel parameters
   sysctl:
-    name: net.ipv6.conf.ens160.disable_ipv6
+    name: net.ipv6.conf."{{ item }}".disable_ipv6
     value: 1
     sysctl_file: /etc/sysctl.d/01-ipv6.conf
     reload: yes
-
+  loop: "{{ nics }}"
+  
 - name: Edit sshd service
   lineinfile:
     path: "{{ ssh_config_file }}"

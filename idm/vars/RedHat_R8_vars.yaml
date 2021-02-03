@@ -6,5 +6,7 @@ packages:
   - bind-utils
 nics:
   - ens160
+  - default
+  
 ssh_service_name: sshd
 ssh_config_file: /etc/ssh/sshd_config
