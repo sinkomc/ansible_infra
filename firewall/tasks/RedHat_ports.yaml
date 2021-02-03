@@ -1,6 +1,6 @@
 ---
 - name: Allow firewall ports
-  debug: msg="This is teh value: {{ firewall_ports }}"
+  debug: msg="This is the value {{ firewall_ports }}"
   # firewalld:
   #   port: "{{ item }}"
   #   permanent: yes
