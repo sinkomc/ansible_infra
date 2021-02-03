@@ -5,7 +5,6 @@
     apply:
       tags:
         - 'Allow firewall Ports'
-  when: firewall_ports != ""
 
 - name: Allowing firewall services
   include_tasks:
@@ -13,4 +12,3 @@
     apply:
       tags:
         - 'Allow firewall Ports'
-  when: firewall_services is defined

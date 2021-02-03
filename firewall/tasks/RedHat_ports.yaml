@@ -6,3 +6,4 @@
     immediate: yes
     state: enabled
   loop: "{{ firewall_ports }}"
+  when firewall_ports !=""
