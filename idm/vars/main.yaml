@@ -7,3 +7,6 @@ timezone_idm: America/Mexico_City
 chrony_service_name_idm: chronyd
 chrony_server_idm:
   - cronos.cenam.mx
+idm_password: temporal123
+idm_reverse: 100.168.192
+idm_forwarder: 1.1.1.1
