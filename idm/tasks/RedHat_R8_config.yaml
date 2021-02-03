@@ -4,7 +4,7 @@
     name: net.ipv6.conf."{{ item }}".disable_ipv6
     value: 1
     sysctl_file: "{{ sysctl_conf_file }}"
-    reload: no
+    sysctl_set: yes
   loop: "{{ nics }}"
 
 - name: Edit sshd service
