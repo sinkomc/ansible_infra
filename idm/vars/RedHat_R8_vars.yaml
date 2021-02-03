@@ -4,3 +4,7 @@ streams:
   - adtrust
 packages:
   - bind-utils
+nics:
+  - ens160
+ssh_service_name: sshd
+ssh_config_file: /etc/ssh/sshd_config

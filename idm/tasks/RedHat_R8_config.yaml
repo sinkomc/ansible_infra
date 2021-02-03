@@ -1,0 +1,15 @@
+---
+- name: Add network kernel parameters
+  copy:
+    dest: "/etc/sysctl.d/00-network.conf"
+    content: |
+      net.ipv6.conf"{{ item }}".disable_ipv6 = 1
+      net.ipv6.conf.default.disable_ipv6 = 1
+  loop: "{{ nics }}"
+
+- name: Edit sshd service
+  lineinfile:
+    path: "{{ ssh_config_file }}"
+    regexp: '^#AddressFamily'
+    line: AddressFamily inet
+  notify: 'restart sshd'
