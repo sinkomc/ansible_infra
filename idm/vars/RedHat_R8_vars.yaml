@@ -7,6 +7,6 @@ packages:
 nics:
   - ens160
   - default
-  
 ssh_service_name: sshd
 ssh_config_file: /etc/ssh/sshd_config
+sysctl_file: "{{ /etc/sysctl.d/01-ipv6.conf }}"
