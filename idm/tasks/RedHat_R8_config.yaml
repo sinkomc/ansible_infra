@@ -14,11 +14,11 @@
     line: AddressFamily inet
   notify: 'restart sshd'
 
-- name: Install Free-ipa
-  shell: "ipa-server-install --domain={{ domain_idm }} --realm={{ domain_idm | upper}} --ds-password={{ idm_password }} --admin-password={{ idm_password }} --hostname={{ hostname_idm }}.{{ domain_idm}} --ip-address={{ ansible_default_ipv4.address }} --reverse-zone={{ idm_reverse }}.in-addr.arpa. --forwarder={{ idm_forwarder }} --allow-zone-overlap --setup-dns --unattended "
-  register: idm_installation
-
-- debug: msg="{{ idm_installation }}"
+# - name: Install Free-ipa
+#   shell: "ipa-server-install --domain={{ domain_idm }} --realm={{ domain_idm | upper}} --ds-password={{ idm_password }} --admin-password={{ idm_password }} --hostname={{ hostname_idm }}.{{ domain_idm}} --ip-address={{ ansible_default_ipv4.address }} --reverse-zone={{ idm_reverse }}.in-addr.arpa. --forwarder={{ idm_forwarder }} --allow-zone-overlap --setup-dns --unattended "
+#   register: idm_installation
+#
+# - debug: msg="{{ idm_installation }}"
 
 - name: Edit DNS Server
   lineinfile:
