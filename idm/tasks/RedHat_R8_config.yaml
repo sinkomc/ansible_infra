@@ -2,7 +2,7 @@
 - name: Add network kernel parameters
   sysctl:
     name: net.ipv6.conf."{{ item }}".disable_ipv6
-    value: 1
+    value: '1'
     sysctl_file: "{{ sysctl_conf_file }}"
     sysctl_set: yes
   loop: "{{ nics }}"
