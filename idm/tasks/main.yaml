@@ -26,3 +26,10 @@
     timezone: "{{ timezone_idm }}"
     chrony_service_name: "{{ chrony_service_name_idm }}"
     chrony_server: "{{ chrony_server_idm }}"
+
+- name: Installing idm
+  include_tasks:
+    file: "{{ ansible_fact['os_family'] }}_R{{ ansible_fact['distribution_major_version']}}_install.yaml"
+    apply:
+      tags:
+        - 'Install idm packages'

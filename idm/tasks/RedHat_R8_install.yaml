@@ -1,0 +1,6 @@
+---
+- name: Enable idm module {{ module }}
+  dnf_module:
+    name: idm:"{{ module }}"
+    state: enabled
+    allow_switch_module_streams: true
