@@ -7,6 +7,6 @@
 
 - name: Install packages
   dnf:
-    name: "{{ items }}"
+    name: "{{ item }}"
     state: latest
   loop: "{{ packages }}"
