@@ -7,6 +7,6 @@
 
 - name: Install idm streams
   dnf:
-    name: ""@idm:{{ module }}/{{ item }}"
+    name: "@idm:{{ module }}/{{ item }}"
     state: latest
   loop: "{{ streams }}"
