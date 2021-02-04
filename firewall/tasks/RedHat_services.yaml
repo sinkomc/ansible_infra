@@ -1,6 +1,5 @@
 ---
 - name: Allow firewall services
-  # debug: msg="{{ firewall_services }}"
   firewalld:
     service: "{{ firewall_services }}"
     permanent: yes
