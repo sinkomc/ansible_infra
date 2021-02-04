@@ -1,6 +1,4 @@
 ---
-- debug: msg="{{ firewall_services }}"
-
 - name: Allow firewall services
   firewalld:
     service: "{{ firewall_services }}"
