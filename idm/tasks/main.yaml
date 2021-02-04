@@ -35,7 +35,7 @@
         - 'Install idm packages'
 
 - name: Setup firewall
-  include_tasks: firewall/tasks/"{{ ansible_facts['os_family'] }}"_services.yaml
+  include_tasks: ../firewall/tasks/"{{ ansible_facts['os_family'] }}"_services.yaml
   vars:
     firewall_services: "{{ firewall_services_idm }}"
 
