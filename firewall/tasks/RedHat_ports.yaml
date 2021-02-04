@@ -1,7 +1,7 @@
 ---
 - name: Allow firewall ports
   debug: msg="Not is null"
-  when: firewall_ports != null
+  when: firewall_ports != 'null'
   # firewalld:
   #   port: "{{ item }}"
   #   permanent: yes
