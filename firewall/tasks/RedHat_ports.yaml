@@ -1,9 +1,10 @@
 ---
-- name: Allow firewall ports
-  firewalld:
-    port: "{{ item }}"
-    permanent: yes
-    immediate: yes
-    state: enabled
-  loop: "{{ firewall_ports }}"
-  when: not firewall_ports == "null"
+- denug: msg="Task executed"
+# - name: Allow firewall ports
+#   firewalld:
+#     port: "{{ item }}"
+#     permanent: yes
+#     immediate: yes
+#     state: enabled
+#   loop: "{{ firewall_ports }}"
+#   when: not firewall_ports == "null"
