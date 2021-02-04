@@ -35,17 +35,13 @@
         - 'Install idm packages'
 
 - name: Setup firewall
-  include_role:
-    name: firewall
-    apply:
-      tags: 'Setup Firewall'
-  # vars:
-  #   firewall_services: "{{ item }}"
-  # loop: "{{ firewall_services_idm }}"
+  include_tasks: firewall/tasks/"{{ ansible_facts['os_family'] }}"_services.yaml
+  vars:
+    firewall_services: "{{ firewall_services_idm }}"
 
-- name: Setting os config
-  include_tasks:
-    file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version']}}_config.yaml"
-    apply:
-      tags:
-        - 'Set os config'
+# - name: Setting os config
+#   include_tasks:
+#     file: "{{ ansible_facts['os_family'] }}_R{{ ansible_facts['distribution_major_version']}}_config.yaml"
+#     apply:
+#       tags:
+#         - 'Set os config'

@@ -20,8 +20,8 @@
 #
 # - debug: msg="{{ idm_installation }}"
 
-- name: Edit DNS Server
-  lineinfile:
-    path: "{{ dns_file }}"
-    regexp: '^nameserver'
-    line: nameserver {{ ansible_default_ipv4.address }}
+# - name: Edit DNS Server
+#   lineinfile:
+#     path: "{{ dns_file }}"
+#     regexp: '^nameserver'
+#     line: nameserver {{ ansible_default_ipv4.address }}
