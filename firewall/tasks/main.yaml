@@ -13,3 +13,4 @@
     apply:
       tags:
         - 'Allow firewall Services'
+  when: firewall_services == "null"
